@@ -4,15 +4,21 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/tw-elements-react/dist/js/**/*.js",
   ],
   theme: {
     extend: {
+      colors: {
+        colorOne: "#131424",
+        colorTwo: "#393A47",
+        colorThree: "#F13025",
+        background: "#1d1539",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/assest/fire.png')",
       },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [require("tw-elements-react/dist/plugin.cjs")],
 };
